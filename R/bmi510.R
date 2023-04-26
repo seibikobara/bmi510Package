@@ -7,7 +7,7 @@
 #' @keywords internal
 #' @examples
 #' should_stop(stop("Hi"))
-should_stop <- function(expr){
+should_stop_modified <- function(expr){
     res <- try(print("hello"))
 }
 
