@@ -1,3 +1,5 @@
 .Rproj.user
 *.csv
 *.pdf
+test.R
+test.rds
