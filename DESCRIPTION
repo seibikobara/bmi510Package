@@ -2,10 +2,11 @@ Package: bmi510Package
 Title: This package was created for BMI510 final project
 Version: 0.0.0.9000
 Authors@R: 
-    person("Seibi", "Kobara", , "seibi.kobara@emory.edu")
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Seibi", "Kobara", , "seibi.kobara@emory.edu", role = ("aut", "cre"),
+    comment = c(ORCID="0000-0001-8134-7652"))
+Description: A package for BMI final project.
+License: use_mit_license()
+         use_gpl3_license()
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
