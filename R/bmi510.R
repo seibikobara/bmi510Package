@@ -45,7 +45,7 @@ rando <- function(X, n ,replace= T){
 #' @import tidyverse
 #' @aliases is_min
 #' @aliases is_max
-#' @export
+#' @export is_min is_max
 #' @usage 
 #' is_min(x, na.rm=T)
 #' is_max(x, na.rm=T)
