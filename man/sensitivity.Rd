@@ -2,9 +2,15 @@
 % Please edit documentation in R/bmi510.R
 \name{sensitivity}
 \alias{sensitivity}
+\alias{specificity}
 \title{Calculate the sensitivity, specificity, precision, recall, accuracy, and F1 scores}
 \usage{
 sensitivity(pred, truth)
+specificity(pred, truth)
+precision(pred, truth)
+recall(pred, truth)
+accuracy(pred, truth)
+f1(pred, truth)
 }
 \arguments{
 \item{pred}{A vector of predicted binary or boolean values}

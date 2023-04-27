@@ -247,6 +247,12 @@ log_likelihood_t <- function(x, df){
 #' Calculate the sensitivity, specificity, precision, recall, accuracy, and F1 scores
 #' @usage 
 #' sensitivity(pred, truth)
+#' specificity(pred, truth)
+#' precision(pred, truth)
+#' recall(pred, truth)
+#' accuracy(pred, truth)
+#' f1(pred, truth)
+#' @aliases specificity
 #' @param pred A vector of predicted binary or boolean values
 #' @param truth A vector of true binary or boolean values 
 #' @examples
