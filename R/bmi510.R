@@ -2,27 +2,35 @@
 #' 
 #' 20 functions are documented in this package
 #' 
-#' @details 
-#' xxx
-#' @param expr code to evaluate
-#' @keywords internal
-#' @examples
-#' should_stop(stop("Hi"))
-should_stop_modified <- function(expr){
-    res <- try(print("hello"))
-}
 
 #'
 #' @title 
-#' xxx
+#' Apply functions over a vector or dataframe (tibble) 
 #' @description
-#' xxx
+#' Returns a specified samples or rows from a vector or data frame.
 #' @details
-#' xxx
-#' @param x dataframe
-#' @param n start with 1, n, replace 
+#' rando(X, n, replace = TRUE)
+#' @param X An atomic vector, data frame, or tibble
+#' @param n n samples will be sampled from X
+#' @param replace default TRUE, this allows sampling with replacement
 #' @examples
-#' rando(x, 3, replace = F)
-rando <- function(x, n=1, replace=T){
-    print("hello")
-}
+#' X = c(1,2,3)
+#' rando(X, 2, replace = F)
+#' @return 
+#' 3,2
+rando = function(X, n ,replace= T){
+    # Determine atomic vector or dataframe or tidy 
+    if(is.vector(X)){
+        res = sample(X, n, replace)
+        return(res)
+    }
+    else if(sum(class(X) %in% c("tbl_df","tbl","data.frame")>0)){
+        # sample ramdom rows from the X dataframe or tibble
+        rows = sample(c(1:nrow(X)), n, replace)
+        res = X[rows,]
+        return(res)
+    }else{
+        stop("X needs to be eight an atomic vector or data frame/tibble")
+    }
+    
+} 

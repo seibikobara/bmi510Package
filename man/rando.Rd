@@ -2,21 +2,31 @@
 % Please edit documentation in R/bmi510.R
 \name{rando}
 \alias{rando}
-\title{xxx}
+\title{Apply functions over a vector or dataframe (tibble)}
 \usage{
-rando(x, n = 1, replace = T)
+rando(X, n, replace = T)
 }
 \arguments{
-\item{x}{dataframe}
+\item{X}{An atomic vector, data frame, or tibble}
 
-\item{n}{start with 1, n, replace}
+\item{n}{n samples will be sampled from X}
+
+\item{replace}{default TRUE, this allows sampling with replacement}
+}
+\value{
+3,2
 }
 \description{
-xxx
+Returns a specified samples or rows from a vector or data frame.
 }
 \details{
-xxx
+This stores functions for BMI510 final project
+
+20 functions are documented in this package
+
+rando(X, n, replace = TRUE)
 }
 \examples{
-rando(x, 3, replace = F)
+X = c(1,2,3)
+rando(X, 2, replace = F)
 }
