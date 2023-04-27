@@ -184,7 +184,7 @@ df_scale <- function(x, center = T, scale = T){
 
 
 #' Sum of log likelihood for a particular probability distribution 
-#' @export
+#' @export log_likelihood_norm log_likelihood_unif log_likelihood_chisq log_likelihood_f log_likelihood_t
 #' @aliases log_likelihood_norm
 #' @aliases log_likelihood_unif
 #' @aliases log_likelihood_chisq
@@ -258,7 +258,7 @@ log_likelihood_t <- function(x, df){
 
 
 #' Calculate the sensitivity, specificity, precision, recall, accuracy, and F1 scores
-#' @export
+#' @export sensitivity specificity precision recall accuracy f1
 #' @usage 
 #' sensitivity(pred, truth)
 #' specificity(pred, truth)
@@ -454,13 +454,6 @@ minimum_n_per_group <- function(d, power = 0.8){
     return(rounded)
 }
 
-
-
-
-#' @export
-temp <- function(){
-    print("Hello!!!")
-}
 
 
 
