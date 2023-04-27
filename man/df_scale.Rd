@@ -2,7 +2,7 @@
 % Please edit documentation in R/bmi510.R
 \name{df_scale}
 \alias{df_scale}
-\title{df_scale}
+\title{Center and scale a data frame}
 \usage{
 df_scale(x, center = T, scale = T)
 }
@@ -13,7 +13,7 @@ df_scale(x, center = T, scale = T)
 A matrix
 }
 \description{
-df_scale
+Center and scale a data frame
 }
 \examples{
 x = tibble(x = c(1,2,3),

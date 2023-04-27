@@ -23,5 +23,9 @@ Function to return a detaframe or matrix where each original row is replicated.
 X = matrix(c(1:10), ncol = 5)
 rep_mat(X, M= 2, N=2)
 # This returs
-#  
+     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+[1,]    1    3    5    7    9    1    3    5    7     9
+[2,]    2    4    6    8   10    2    4    6    8    10
+[3,]    1    3    5    7    9    1    3    5    7     9
+[4,]    2    4    6    8   10    2    4    6    8    10
 }
