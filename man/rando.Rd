@@ -14,10 +14,13 @@ rando(X, n, replace = TRUE)
 \item{replace}{default TRUE, this allows sampling with replacement}
 }
 \value{
-3,2
+vector or data frame
 }
 \description{
 Returns a specified samples or rows from a vector or data frame.
+}
+\details{
+This function take a vector or dataframe. If a vector is the input, this function returns a specified number of random samples from this vector. If a data frame is the imput, this function picks a specified number of random rows and returns a data frame with these rows.
 }
 \examples{
 X = c(1,2,3)
