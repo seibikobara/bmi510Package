@@ -2,7 +2,6 @@
 #' Apply functions over a vector or dataframe (tibble) 
 #' @description
 #' Returns a specified samples or rows from a vector or data frame.
-#' @export
 #' @usage
 #' rando(X, n, replace = TRUE)
 #' @param X An atomic vector, data frame, or tibble
@@ -15,6 +14,7 @@
 #' vector or data frame
 #'@details 
 #' This function take a vector or dataframe. If a vector is the input, this function returns a specified number of random samples from this vector. If a data frame is the imput, this function picks a specified number of random rows and returns a data frame with these rows. 
+#' @export
 
 rando <- function(X, n ,replace= T){
     # Determine atomic vector or dataframe or tidy 
