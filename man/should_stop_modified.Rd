@@ -12,6 +12,9 @@ should_stop_modified(expr)
 \description{
 20 functions are documented in this package
 }
+\details{
+xxx
+}
 \examples{
 should_stop(stop("Hi"))
 }
