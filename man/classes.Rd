@@ -2,18 +2,18 @@
 % Please edit documentation in R/bmi510.R
 \name{classes}
 \alias{classes}
-\title{classes}
+\title{Determining a class for each column vector in a data frame}
 \usage{
 classes(x)
 }
 \arguments{
-\item{x}{data frame}
+\item{x}{a data frame}
 }
 \value{
-vector
+a character vector
 }
 \description{
-classes
+Determining a class for each column vector in a data frame
 }
 \examples{
 b = data.frame(x = c(1,2,3),
