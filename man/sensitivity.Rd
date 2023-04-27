@@ -3,6 +3,10 @@
 \name{sensitivity}
 \alias{sensitivity}
 \alias{specificity}
+\alias{precision}
+\alias{recall}
+\alias{accuracy}
+\alias{f1}
 \title{Calculate the sensitivity, specificity, precision, recall, accuracy, and F1 scores}
 \usage{
 sensitivity(pred, truth)

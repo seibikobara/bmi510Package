@@ -42,6 +42,8 @@ rando = function(X, n ,replace= T){
 
 #' Identify the minimum and max value
 #' @import tidyverse
+#' @aliases is_min
+#' @aliases is_max
 #' @usage 
 #' is_min(x, na.rm=T)
 #' is_max(x, na.rm=T)
@@ -178,6 +180,12 @@ df_scale <- function(x, center = T, scale = T){
 
 #' Sum of log likelihood for a particular probability distribution 
 #' 
+#' @aliases log_likelihood_norm
+#' @aliases log_likelihood_unif
+#' @aliases log_likelihood_chisq
+#' @aliases log_likelihood_f
+#' @aliases log_likelihood_t
+#' 
 #' @usage 
 #' # Normal distribition
 #' log_likelihood_norm(x, mean, sd)
@@ -253,6 +261,11 @@ log_likelihood_t <- function(x, df){
 #' accuracy(pred, truth)
 #' f1(pred, truth)
 #' @aliases specificity
+#' @aliases precision
+#' @aliases recall
+#' @aliases accuracy
+#' @aliases f1
+#' 
 #' @param pred A vector of predicted binary or boolean values
 #' @param truth A vector of true binary or boolean values 
 #' @examples

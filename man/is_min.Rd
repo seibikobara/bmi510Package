@@ -2,6 +2,7 @@
 % Please edit documentation in R/bmi510.R
 \name{is_min}
 \alias{is_min}
+\alias{is_max}
 \title{Identify the minimum and max value}
 \usage{
 is_min(x, na.rm=T)

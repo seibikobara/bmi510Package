@@ -2,6 +2,10 @@
 % Please edit documentation in R/bmi510.R
 \name{log_likelihood_norm}
 \alias{log_likelihood_norm}
+\alias{log_likelihood_unif}
+\alias{log_likelihood_chisq}
+\alias{log_likelihood_f}
+\alias{log_likelihood_t}
 \title{Sum of log likelihood for a particular probability distribution}
 \usage{
 # Normal distribition
