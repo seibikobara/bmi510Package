@@ -1,14 +1,9 @@
-#' This stores functions for BMI510 final project
-#' 
-#' 20 functions are documented in this package
-#' 
 
-#'
 #' @title 
 #' Apply functions over a vector or dataframe (tibble) 
 #' @description
 #' Returns a specified samples or rows from a vector or data frame.
-#' @details
+#' @usage
 #' rando(X, n, replace = TRUE)
 #' @param X An atomic vector, data frame, or tibble
 #' @param n n samples will be sampled from X
@@ -16,7 +11,7 @@
 #' @examples
 #' X = c(1,2,3)
 #' rando(X, 2, replace = F)
-#' @return 
+#' @returns 
 #' 3,2
 rando = function(X, n ,replace= T){
     # Determine atomic vector or dataframe or tidy 

@@ -4,7 +4,7 @@
 \alias{rando}
 \title{Apply functions over a vector or dataframe (tibble)}
 \usage{
-rando(X, n, replace = T)
+rando(X, n, replace = TRUE)
 }
 \arguments{
 \item{X}{An atomic vector, data frame, or tibble}
@@ -18,13 +18,6 @@ rando(X, n, replace = T)
 }
 \description{
 Returns a specified samples or rows from a vector or data frame.
-}
-\details{
-This stores functions for BMI510 final project
-
-20 functions are documented in this package
-
-rando(X, n, replace = TRUE)
 }
 \examples{
 X = c(1,2,3)
