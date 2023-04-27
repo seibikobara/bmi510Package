@@ -298,7 +298,7 @@ sensitivity = function(pred, truth){
                 truth = truth)
     true_positive = temp |> dplyr::filter(truth == 1)
     # sensitivity is a proportion of observed posivie among them 
-    n_observed_positive = true_positive |> dplyr::filter(pred ==1) |> dplyr::nrow()
+    n_observed_positive = true_positive |> dplyr::filter(pred ==1) |> nrow()
     # total true positive
     n_true_positive = nrow(true_positive)
     # sensitivity 
@@ -320,7 +320,7 @@ specificity = function(pred, truth){
                 truth = truth)
     true_negative = temp |> dplyr::filter(truth == 0)
     # specificity is a proportion of observed negative among them 
-    n_observed_negative = true_negative |> dplyr::filter(pred ==0) |> dplyr::nrow()
+    n_observed_negative = true_negative |> dplyr::filter(pred ==0) |> nrow()
     # total true negative
     n_true_negative = nrow(true_negative)
     # specificity
@@ -343,7 +343,7 @@ precision = function(pred, truth){
                 truth = truth)
     observed_positive = temp |> dplyr::filter(pred == 1)
     # precision is a proportion of true positive among them 
-    n_true_positive = observed_positive |> dplyr::filter(truth ==1) |> dplyr::nrow()
+    n_true_positive = observed_positive |> dplyr::filter(truth ==1) |> nrow()
     # total true negative
     n_observed_positive = nrow(observed_positive)
     # precision 
@@ -367,7 +367,7 @@ recall = function(pred, truth){
                 truth = truth)
     true_positive = temp |> dplyr::filter(truth == 1)
     # recall is a proportion of observed posivie among them 
-    n_observed_positive = true_positive |> dplyr::filter(pred ==1) |> dplyr::nrow()
+    n_observed_positive = true_positive |> dplyr::filter(pred ==1) |> nrow()
     # total true positive
     n_true_positive = nrow(true_positive)
     # recall 
