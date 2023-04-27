@@ -296,9 +296,9 @@ sensitivity = function(pred, truth){
     # extract true positives
     temp = tibble(pred = pred,
                 truth = truth)
-    true_positive = temp |> filter(truth == 1)
+    true_positive = temp |> dplyr::filter(truth == 1)
     # sensitivity is a proportion of observed posivie among them 
-    n_observed_positive = true_positive |> filter(pred ==1) |> nrow()
+    n_observed_positive = true_positive |> dplyr::filter(pred ==1) |> nrow()
     # total true positive
     n_true_positive = nrow(true_positive)
     # sensitivity 
@@ -318,9 +318,9 @@ specificity = function(pred, truth){
     # extract true negatives
     temp = tibble(pred = pred,
                 truth = truth)
-    true_negative = temp |> filter(truth == 0)
+    true_negative = temp |> dplyr::filter(truth == 0)
     # specificity is a proportion of observed negative among them 
-    n_observed_negative = true_negative |> filter(pred ==0) |> nrow()
+    n_observed_negative = true_negative |> dplyr::filter(pred ==0) |> nrow()
     # total true negative
     n_true_negative = nrow(true_negative)
     # specificity
@@ -341,9 +341,9 @@ precision = function(pred, truth){
     # extract observed positives
     temp = tibble(pred = pred,
                 truth = truth)
-    observed_positive = temp |> filter(pred == 1)
+    observed_positive = temp |> dplyr::filter(pred == 1)
     # precision is a proportion of true positive among them 
-    n_true_positive = observed_positive |> filter(truth ==1) |> nrow()
+    n_true_positive = observed_positive |> dplyr::filter(truth ==1) |> nrow()
     # total true negative
     n_observed_positive = nrow(observed_positive)
     # precision 
@@ -365,9 +365,9 @@ recall = function(pred, truth){
     # extract true positives
     temp = tibble(pred = pred,
                 truth = truth)
-    true_positive = temp |> filter(truth == 1)
+    true_positive = temp |> dplyr::filter(truth == 1)
     # recall is a proportion of observed posivie among them 
-    n_observed_positive = true_positive |> filter(pred ==1) |> nrow()
+    n_observed_positive = true_positive |> dplyr::filter(pred ==1) |> nrow()
     # total true positive
     n_true_positive = nrow(true_positive)
     # recall 
@@ -389,16 +389,16 @@ accuracy <- function(pred, truth){
     temp = tibble(pred = pred,
                 truth = truth)
     # TP
-    true_positive = temp |> filter(truth == 1)
+    true_positive = temp |> dplyr::filter(truth == 1)
     TP = nrow(true_positive)
     # TN
-    true_negative = temp |> filter(truth == 0)
+    true_negative = temp |> dplyr::filter(truth == 0)
     TN = nrow(true_negative)
     # FP
-    false_positive = temp |> filter(truth == 0) |> filter(pred==1)
+    false_positive = temp |> dplyr::filter(truth == 0) |> dplyr::filter(pred==1)
     FP = nrow(false_positive)
     # FN
-    false_negative = temp |> filter(truth == 1) |> filter(pred==0)
+    false_negative = temp |> dplyr::filter(truth == 1) |> dplyr::filter(pred==0)
     FN = nrow(false_negative)
     # accuracy
     acc = (TP + TN)/(TP + TN + FP + FN)
