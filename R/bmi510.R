@@ -457,7 +457,10 @@ minimum_n_per_group <- function(d, power = 0.8){
 
 
 
-
+#' @export
+temp <- function(){
+    print("Hello!!!")
+}
 
 
 
