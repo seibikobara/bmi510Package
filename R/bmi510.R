@@ -271,7 +271,7 @@ log_likelihood_t <- function(x, df){
 #' @aliases recall
 #' @aliases accuracy
 #' @aliases f1
-#' 
+#' @import tidyverse
 #' @param pred A vector of predicted binary or boolean values
 #' @param truth A vector of true binary or boolean values 
 #' @examples
