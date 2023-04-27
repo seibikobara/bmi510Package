@@ -2,6 +2,7 @@
 #' Apply functions over a vector or dataframe (tibble) 
 #' @description
 #' Returns a specified samples or rows from a vector or data frame.
+#' @export
 #' @usage
 #' rando(X, n, replace = TRUE)
 #' @param X An atomic vector, data frame, or tibble
@@ -15,7 +16,7 @@
 #'@details 
 #' This function take a vector or dataframe. If a vector is the input, this function returns a specified number of random samples from this vector. If a data frame is the imput, this function picks a specified number of random rows and returns a data frame with these rows. 
 
-rando = function(X, n ,replace= T){
+rando <- function(X, n ,replace= T){
     # Determine atomic vector or dataframe or tidy 
     if(is.vector(X)){
         res = sample(X, n, replace)
@@ -44,6 +45,7 @@ rando = function(X, n ,replace= T){
 #' @import tidyverse
 #' @aliases is_min
 #' @aliases is_max
+#' @export
 #' @usage 
 #' is_min(x, na.rm=T)
 #' is_max(x, na.rm=T)
@@ -87,6 +89,7 @@ is_max <- function(x, na.rm=T){
 
 #' Function to return a detaframe or matrix where each original row is replicated.
 #' @import tidyverse
+#' @export
 #' @usage 
 #' rep_mat(X, M=1, N=1)
 #' @param X A data frame or matrix
@@ -119,6 +122,7 @@ rep_mat <- function(X, M=1, N=1){
 
 
 #' Determining a class for each column vector in a data frame
+#' @export
 #' @usage 
 #' classes(x)
 #' @param x a data frame
@@ -147,6 +151,7 @@ classes <- function(x){
 
 
 #' df_scale
+#' @export
 #' @usage 
 #' df_scale(x, center = T, scale = T)
 #' @param x a data frame
@@ -179,7 +184,7 @@ df_scale <- function(x, center = T, scale = T){
 
 
 #' Sum of log likelihood for a particular probability distribution 
-#' 
+#' @export
 #' @aliases log_likelihood_norm
 #' @aliases log_likelihood_unif
 #' @aliases log_likelihood_chisq
@@ -253,6 +258,7 @@ log_likelihood_t <- function(x, df){
 
 
 #' Calculate the sensitivity, specificity, precision, recall, accuracy, and F1 scores
+#' @export
 #' @usage 
 #' sensitivity(pred, truth)
 #' specificity(pred, truth)
@@ -416,6 +422,7 @@ f1 = function(pred, truth){
 
 
 #' Determine the minimum sample based on t distribution 
+#' @export
 #' @usage 
 #' minimum_n_per_group(d, power)
 #' @param d cohen's effect size
@@ -456,7 +463,7 @@ minimum_n_per_group <- function(d, power = 0.8){
 
 
 #' Calculate the R square
-#'
+#' @export
 #' @usage 
 #' r2(pred, truth)
 #' @param pred A vector of predicted numerical values
@@ -485,7 +492,7 @@ r2 <- function(pred, truth){
 
 
 #' Calculate the adjusted R square
-#'
+#' @export
 #' @usage 
 #' adj_R2(pred, truth, n_p)
 #' @param pred A vector of predicted numerical values
