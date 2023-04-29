@@ -492,7 +492,6 @@ r2 <- function(pred, truth){
 
 
 
-
 #' Calculate the adjusted R square
 #' @export
 #' @usage 
