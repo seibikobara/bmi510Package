@@ -162,27 +162,29 @@ classes <- function(x){
 #' @examples 
 #' x = tibble(x = c(1,2,3),
 #'            y = c(4,5,6),
-#'            z = c(7,8,9)
+#'            z = c("a","b","c")
 #'           )
 #' df_scale(x)
 #' # returns
-#'       x  y  z
-#' [1,] -1 -1 -1
-#' [2,]  0  0  0
-#' [3,]  1  1  1
+#'       x     y z    
+#'   <dbl> <dbl> <chr>
+#' 1    -1    -1 a    
+#' 2     0     0 b    
+#' 3     1     1 c    
 #' @returns
-#' A matrix 
+#' A tibble
+
+
 
 df_scale <- function(x, center = T, scale = T){
-    # keep only numeric variables
-    numerics = x[, classes(x)=="numeric"]
-    # convert to matrix
-    numerics = as.matrix(numerics)
-    res = scale(numerics, center, scale)[,]
+    # columns with numerical vectors
+    nu_cols = names(x)[classes(x)=="numeric"]
+    scale_function = function(x){
+        x = scale(x, center, scale)[,]
+    }
+    res = x %>% mutate_at(nu_cols, scale_function)
     return(res)
 }
-
-
 
 
 

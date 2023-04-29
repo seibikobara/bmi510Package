@@ -10,7 +10,7 @@ df_scale(x, center = T, scale = T)
 \item{x}{a data frame}
 }
 \value{
-A matrix
+A tibble
 }
 \description{
 Center and scale a data frame
@@ -18,12 +18,13 @@ Center and scale a data frame
 \examples{
 x = tibble(x = c(1,2,3),
            y = c(4,5,6),
-           z = c(7,8,9)
+           z = c("a","b","c")
           )
 df_scale(x)
 # returns
-      x  y  z
-[1,] -1 -1 -1
-[2,]  0  0  0
-[3,]  1  1  1
+      x     y z    
+  <dbl> <dbl> <chr>
+1    -1    -1 a    
+2     0     0 b    
+3     1     1 c    
 }
